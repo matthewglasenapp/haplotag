@@ -1,1 +1,43 @@
+# Phase/Haplotag Tutorial
 
+Look at VCF records in the HLA-A gene (chr6  29941259  29949572)
+```
+bcftools view -r chr6:29941259-29949572 HG002.dedup.trimmed.hg38.chr6.phased.vcf.gz | less
+```
+
+Example of phased genotype, indicated by "|" and PS tag (29921307)
+```
+chr6    29941293        .       T       C       59.2    PASS    .       GT:GQ:DP:AD:VAF:PL:PS   1|0:56:57:30,27:0.473684:59,0,59:29921307
+```
+
+Example of unphased genotype, indicated by "/" and no PS tag
+Homozygous genotypes (i.e, non-ref/non-ref) are not phased by WhatsHap nor HiPhase
+```
+chr6    29941404        .       A       C       59.8    PASS    .       GT:GQ:DP:AD:VAF:PL      1/1:55:62:0,62:1:59,56,0
+```
+
+FORMAT Fields definitions:
+  GT: Genotype
+  GQ: Conditional genotype quality
+  DP: Read depth
+  AD: Read depth for each allele
+  PL: Phred-scaled genotype likelihoods rounded to the closest integer
+  PS: Phase set identifier
+
+Look at BAM records in the HLA-A gene (chr6  29941259  29949572)
+```
+samtools view HG002.dedup.trimmed.hg38.chr6.haplotag.bam chr6:29941259-29949572 | less
+```
+
+Example FORMAT fields from a haplotagged read
+```
+RG:Z:m84039_240622_113450_s1	qs:i:0	qe:i:7293	mg:f:99.3829	NM:i:193	HP:i:2	PC:i:3720	PS:i:29921307
+```
+This read belongs to haplotype 2 in phase set 29921307
+
+Split BAM file by HP tag
+```
+samtools view -h HG002.dedup.trimmed.hg38.chr6.haplotag.bam | grep -E 'HP:i:1|^@' | samtools view -b -o hap1.bam
+samtools view -h HG002.dedup.trimmed.hg38.chr6.haplotag.bam | grep -E 'HP:i:2|^@' | samtools view -b -o hap2.bam
+samtools view -h HG002.dedup.trimmed.hg38.chr6.haplotag.bam | grep -E -v 'HP:i:[12]' | samtools view -b -o no_hp.bam
+```
