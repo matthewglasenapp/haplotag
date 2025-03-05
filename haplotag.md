@@ -35,14 +35,14 @@ RG:Z:m84039_240622_113450_s1	qs:i:0	qe:i:7293	mg:f:99.3829	NM:i:193	HP:i:2	PC:i:
 ```
 This read belongs to haplotype 2 in phase set 29921307
 
-Split BAM file by HP tag
+Split BAM file by HP tag (I've done this already for each sample)
 ```
 samtools view -h HG002.dedup.trimmed.hg38.chr6.haplotag.bam | grep -E 'HP:i:1|^@' | samtools view -b -o hap1.bam
 samtools view -h HG002.dedup.trimmed.hg38.chr6.haplotag.bam | grep -E 'HP:i:2|^@' | samtools view -b -o hap2.bam
 samtools view -h HG002.dedup.trimmed.hg38.chr6.haplotag.bam | grep -E -v 'HP:i:[12]' | samtools view -b -o no_hp.bam
 ```
 
-Index each new BAM file
+Index each new BAM file (I've done this already for each sample)
 ```
 samtools index hap1.bam
 samtools index hap2.bam
