@@ -9,3 +9,8 @@ Download it to your local device with the following command. Substitute <usernam
 ```
 rsync -avz --progress <username>@hb.ucsc.edu:/hb/groups/cornejo_lab/matt/sample_bams_vcfs/ ~/Desktop/sample_bams_vcfs/
 ```
+
+Change permissions:
+```
+chmod -R 777 ~/Desktop/sample_bams_vcfs/
+```
