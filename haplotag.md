@@ -2,7 +2,7 @@
 
 Look at VCF records in the HLA-A gene (chr6  29941259  29949572)
 ```
-bcftools view -r chr6:29941259-29949572 HG002.dedup.trimmed.hg38.chr6.phased.vcf.gz | less
+bcftools view -r chr6:29941259-29949572 HG002.vcf.gz | less
 ```
 
 Example of phased genotype, indicated by "|" and PS tag (29921307)
@@ -26,7 +26,7 @@ FORMAT Fields definitions:
 
 Look at BAM records in the HLA-A gene (chr6  29941259  29949572)
 ```
-samtools view HG002.dedup.trimmed.hg38.chr6.haplotag.bam chr6:29941259-29949572 | less
+samtools view HG002.haplotag.bam chr6:29941259-29949572 | less
 ```
 
 Example FORMAT fields from a haplotagged read
@@ -37,16 +37,16 @@ This read belongs to haplotype 2 in phase set 29921307
 
 Split BAM file by HP tag (I've done this already for each sample)
 ```
-samtools view -h HG002.dedup.trimmed.hg38.chr6.haplotag.bam | grep -E 'HP:i:1|^@' | samtools view -b -o hap1.bam
-samtools view -h HG002.dedup.trimmed.hg38.chr6.haplotag.bam | grep -E 'HP:i:2|^@' | samtools view -b -o hap2.bam
-samtools view -h HG002.dedup.trimmed.hg38.chr6.haplotag.bam | grep -E -v 'HP:i:[12]' | samtools view -b -o no_hp.bam
+samtools view -h HG002.haplotag.bam | grep -E 'HP:i:1|^@' | samtools view -b -o HG002.haplotag.hap1.bam
+samtools view -h HG002.haplotag.bam | grep -E 'HP:i:2|^@' | samtools view -b -o HG002.haplotag.hap2.bam
+samtools view -h HG002.bam | grep -E -v 'HP:i:[12]' | samtools view -b -o HG002.haplotag.no_hp.bam
 ```
 
 Index each new BAM file (I've done this already for each sample)
 ```
-samtools index hap1.bam
-samtools index hap2.bam
-samtools index no_hp.bam
+samtools index HG002.haplotag.hap1.bam
+samtools index HG002.haplotag.hap2.bam
+samtools index G002.haplotag.no_hp.bam
 ```
 
 Load each file separately in IGV!
@@ -56,5 +56,9 @@ In IGV, right click on reads, click "Color alignments by" -> "tag" and type "HP"
 Here is an example of great phasing in HLA-A. 
 
 ![hla-a](https://github.com/user-attachments/assets/03cfb635-60cc-401e-9a4b-2f890e1c9ff1)
+
+You can also load the BAM from before splitting by HP tag. You can color alignments by PS or HP tag. "PS" stands for "Phase Set" and represents the haploblocks defined by HiPhase. 
+
+
 
 
