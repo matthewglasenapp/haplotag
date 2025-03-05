@@ -53,5 +53,6 @@ Load each file separately in IGV!
 
 In IGV, right click on reads, click "Color alignments by" -> "tag" and type "HP"
 
-![hla-a](https://github.com/user-attachments/assets/8f95a2df-3c56-486b-a5b2-bda0e62be333)
+![hla-a](https://github.com/user-attachments/assets/03cfb635-60cc-401e-9a4b-2f890e1c9ff1)
+
 
