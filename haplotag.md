@@ -5,7 +5,7 @@ Look at VCF records in the HLA-A gene (chr6  29941259  29949572)
 bcftools view -r chr6:29941259-29949572 HG002.vcf.gz | less
 ```
 
-Example of phased genotype, indicated by "|" and PS tag (29921307)
+Example of phased genotype, indicated by "1|0" and PS tag (29921307)
 ```
 chr6    29941293        .       T       C       59.2    PASS    .       GT:GQ:DP:AD:VAF:PL:PS   1|0:56:57:30,27:0.473684:59,0,59:29921307
 ```
