@@ -11,7 +11,7 @@ chr6    29941293        .       T       C       59.2    PASS    .       GT:GQ:DP
 ```
 
 Example of unphased genotype, indicated by "/" and no PS tag.
-Homozygous genotypes (i.e, non-ref/non-ref) are not phased by WhatsHap nor HiPhase
+Homozygous genotypes (i.e, non-ref/non-ref) are not phased by WhatsHap or HiPhase.
 ```
 chr6    29941404        .       A       C       59.8    PASS    .       GT:GQ:DP:AD:VAF:PL      1/1:55:62:0,62:1:59,56,0
 ```
