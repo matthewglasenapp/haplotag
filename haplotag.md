@@ -50,3 +50,5 @@ samtools index no_hp.bam
 ```
 
 Load each file separately in IGV!
+
+In IGV, right click on reads, click "Color alignments by" -> "tag" and type "HP"
