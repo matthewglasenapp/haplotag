@@ -53,6 +53,8 @@ Load each file separately in IGV!
 
 In IGV, right click on reads, click "Color alignments by" -> "tag" and type "HP"
 
+Here is an example of great phasing in HLA-A. 
+
 ![hla-a](https://github.com/user-attachments/assets/03cfb635-60cc-401e-9a4b-2f890e1c9ff1)
 
 
