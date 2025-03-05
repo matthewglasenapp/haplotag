@@ -41,3 +41,12 @@ samtools view -h HG002.dedup.trimmed.hg38.chr6.haplotag.bam | grep -E 'HP:i:1|^@
 samtools view -h HG002.dedup.trimmed.hg38.chr6.haplotag.bam | grep -E 'HP:i:2|^@' | samtools view -b -o hap2.bam
 samtools view -h HG002.dedup.trimmed.hg38.chr6.haplotag.bam | grep -E -v 'HP:i:[12]' | samtools view -b -o no_hp.bam
 ```
+
+Index each new BAM file
+```
+samtools index hap1.bam
+samtools index hap2.bam
+samtools index no_hp.bam
+```
+
+Load each file separately in IGV!
