@@ -59,6 +59,8 @@ Here is an example of great phasing in HLA-A.
 
 You can also load the BAM from before splitting by HP tag. You can color alignments by PS or HP tag. "PS" stands for "Phase Set" and represents the haploblocks defined by HiPhase. 
 
+![igv_snapshot](https://github.com/user-attachments/assets/13cd7d05-3efa-4f87-aac5-5014f10969c1)
 
+![igv_snapshot](https://github.com/user-attachments/assets/9bda6f23-aa94-4411-a85f-6319956f72c8)
 
 
