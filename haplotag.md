@@ -1,6 +1,6 @@
 # Phase/Haplotag Tutorial
 
-Research Questions:
+## Research Questions
 For the gene x sample combinations that could not be fully phased, 
 
 1. Were there any overlapping haploblocks? If so, how many?
@@ -18,6 +18,7 @@ DQB1: IHW09071, IHW09118
 DQB2: IHW09118
 DPB1: IHW09224, NA19240
 ```
+## Investigating Unphased Genes in IGV
 Let's look at HG002 HLA-DRB1. 
 
 Here is the IGV with reads colored by tag "PS" (phase set).
@@ -30,6 +31,7 @@ All of the reads are soft-clipped at this breakpoint. And there are 6 bases with
 
 Let's record the problematic coordinates (chr6:32,584,977). This region is in HLA-DRB1 intron 1. 
 
+## Working with VCF and BAM Files
 Look at VCF records in the HLA-A gene (chr6  29941259  29949572)
 ```
 bcftools view -r chr6:29941259-29949572 HG002.vcf.gz | less
@@ -65,14 +67,14 @@ RG:Z:m84039_240622_113450_s1	qs:i:0	qe:i:7293	mg:f:99.3829	NM:i:193	HP:i:2	PC:i:
 ```
 This read belongs to haplotype 2 in phase set 29921307
 
-Split BAM file by HP tag (I've done this already for each sample)
+Split BAM file by HP tag (I've already done this already for each sample)
 ```
 samtools view -h HG002.haplotag.bam | grep -E 'HP:i:1|^@' | samtools view -b -o HG002.haplotag.hap1.bam
 samtools view -h HG002.haplotag.bam | grep -E 'HP:i:2|^@' | samtools view -b -o HG002.haplotag.hap2.bam
 samtools view -h HG002.bam | grep -E -v 'HP:i:[12]' | samtools view -b -o HG002.haplotag.no_hp.bam
 ```
 
-Index each new BAM file (I've done this already for each sample)
+Index each new BAM file (I've already done this already for each sample)
 ```
 samtools index HG002.haplotag.hap1.bam
 samtools index HG002.haplotag.hap2.bam
