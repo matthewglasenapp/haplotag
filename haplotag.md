@@ -5,7 +5,7 @@ For sample x gene combinations that could not be fully phased,
 
 1. How many unphased heterozygous genotypes were there?
 2. Where in the gene are the unphased genotypes?
-3. How does the IGV look at these sitess? Are there structural variants or coverage depth anomalies? Do the IGVs for unphased samples look different from phased samples?
+3. How does the IGV look at these sites? Are there structural variants or coverage depth anomalies? Do the IGVs for unphased samples look different from phased samples?
 
 Look at VCF records in the HLA-A gene (chr6  29941259  29949572)
 ```
