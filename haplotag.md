@@ -3,8 +3,8 @@
 Research Questions:
 For the gene x sample combinations that could not be fully phased, 
 
-1. How many unphased heterozygous genotypes were there?
-2. Where in the gene are the unphased genotypes?
+1. Were there any overlapping haploblocks? If so, how many?
+2. Were there unphased heterozygous genotypes? If so, where in the gene are they located?
 3. How does the IGV look at these sites? Are there structural variants or coverage depth anomalies? Do the IGVs for unphased samples look different from phased samples?
 
 Here is the latest heap map of the phasing results.
