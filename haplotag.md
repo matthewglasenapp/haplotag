@@ -1,7 +1,7 @@
 # Phase/Haplotag Tutorial
 
 Research Questions:
-For sample x gene combinations that could not be fully phased, 
+For the gene x sample combinations that could not be fully phased, 
 
 1. How many unphased heterozygous genotypes were there?
 2. Where in the gene are the unphased genotypes?
