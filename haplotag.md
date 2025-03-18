@@ -19,6 +19,7 @@ DQB2: IHW09118
 DPB1: IHW09224, NA19240
 ```
 Let's look at HG002 HLA-DRB1. 
+
 Here is the IGV with reads colored by tag "PS" (phase set).
 ![igv_snapshot](https://github.com/user-attachments/assets/72e271c9-7d7c-4c99-9893-7c8077b572b9)
 
