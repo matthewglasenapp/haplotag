@@ -8,7 +8,26 @@ For sample x gene combinations that could not be fully phased,
 3. How does the IGV look at these sites? Are there structural variants or coverage depth anomalies? Do the IGVs for unphased samples look different from phased samples?
 
 Here is the latest heap map of the phasing results.
-![hiphase_heat_map](https://github.com/user-attachments/assets/085b7f43-ff09-4a59-ae5e-45785c3b7580)
+![hiphase_heat_map](https://github.com/user-attachments/assets/719edbc6-cc93-4b05-9a0f-a7674159a9e0)
+
+The heat map shows that we could not phase across the entire gene for the following gene x sample combinations:
+```
+DRB1: HG002, HG003, HG005, HG01106, HG01928, HG02055, HG02630, HG03579, IHW09049, IHWW09071, IHW09175, IHW09245, IHW09251, IHW09364, NA20129, NA24694, NA24694
+DRB5: HG01258, HG02055
+DQB1: IHW09071, IHW09118
+DQB2: IHW09118
+DPB1: IHW09224, NA19240
+```
+Let's look at HG002 HLA-DRB1. 
+Here is the IGV with reads colored by tag "PS" (phase set).
+![igv_snapshot](https://github.com/user-attachments/assets/72e271c9-7d7c-4c99-9893-7c8077b572b9)
+
+It looks like there are two haploblocks (pink, blue). Let's zoom in on the breakpoint between the two haploblocks. 
+![igv_snapshot2](https://github.com/user-attachments/assets/5847b11b-104e-4f16-84c6-d62e64d92eb8)
+
+All of the reads are soft-clipped at this breakpoint. And there are 6 bases without any coverage. Why?
+
+Let's record the problematic coordinates (chr6:32,584,977). This region is in HLA-DRB1 intron 1. 
 
 Look at VCF records in the HLA-A gene (chr6  29941259  29949572)
 ```
