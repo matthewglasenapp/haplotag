@@ -7,6 +7,9 @@ For sample x gene combinations that could not be fully phased,
 2. Where in the gene are the unphased genotypes?
 3. How does the IGV look at these sites? Are there structural variants or coverage depth anomalies? Do the IGVs for unphased samples look different from phased samples?
 
+Here is the latest heap map of the phasing results.
+![hiphase_heat_map](https://github.com/user-attachments/assets/085b7f43-ff09-4a59-ae5e-45785c3b7580)
+
 Look at VCF records in the HLA-A gene (chr6  29941259  29949572)
 ```
 bcftools view -r chr6:29941259-29949572 HG002.vcf.gz | less
