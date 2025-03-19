@@ -1,6 +1,6 @@
-Tutorial in haplotag.md
+The Research Tutorial is in the haplotag.md file. 
 
-The data is located on Hummingbird in ```/hb/groups/cornejo_lab/matt/sample_bams_vcfs/```
+The data we will be working with is located on Hummingbird in ```/hb/groups/cornejo_lab/matt/sample_bams_vcfs/```
 
 Each sample has its own directory containing multiple files. Here is an example of the files for HG002.
 
