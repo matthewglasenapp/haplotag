@@ -68,14 +68,15 @@ RG:Z:m84039_240622_113450_s1	qs:i:0	qe:i:7293	mg:f:99.3829	NM:i:193	HP:i:2	PC:i:
 This read belongs to haplotype 2 in phase set 29921307
 
 ## Example of Good Phasing (HG002 HLA-A)
-Here, I have opened hap1.bam and hap2.bam in separate IGV tracks. 
 
-![hla-a](https://github.com/user-attachments/assets/03cfb635-60cc-401e-9a4b-2f890e1c9ff1)
-
-You can also load the BAM from before splitting by HP tag. You can color alignments by PS or HP tag. "PS" stands for "Phase Set" and represents the haploblocks defined by HiPhase. 
-
+Here is the HG002.haplotag.BAM . You can color alignments by PS or HP tag. "PS" stands for "Phase Set" and represents the haploblocks defined by HiPhase.
 ![igv_snapshot](https://github.com/user-attachments/assets/13cd7d05-3efa-4f87-aac5-5014f10969c1)
 
+You can also color alignments by HP tag.  "HP" stands for haplotype and specifies whether the read originated from haplotype 1 or haplotype 2. 
+
 ![igv_snapshot](https://github.com/user-attachments/assets/9bda6f23-aa94-4411-a85f-6319956f72c8)
+
+Here is a different view with hap1.bam and hap2.bam in separate IGV tracks. 
+![hla-a](https://github.com/user-attachments/assets/03cfb635-60cc-401e-9a4b-2f890e1c9ff1)
 
 
