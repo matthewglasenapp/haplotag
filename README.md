@@ -19,9 +19,9 @@ HG002.vcf.gz.tbi
 
 ```HG002.haplotag.bam``` is the alignment file containing both haplotypes. Begin your investigation with this file. I have also split the BAM by haplotype into ```HG002.haplotag.hap1.bam``` and ```HG002.haplotag.hap2.bam```. Reads that could not be assigned a haplotype are in ```HG002.haplotag.no_hp.bam```. ```HG002.vcf.gz``` is the VCF file containing the genotypes called by DeepVariant. 
 
-It is about 2.6 GB of data.
+In total, it is about 2.6 GB of data.
 
-Download it to your local device with the following command. Substitute <username> with your username and specify custom path instead of ~/Desktop/
+You can download it to your local device with the following command. Substitute <username> with your username and specify custom path instead of ~/Desktop/
 
 ```
 rsync -avz --progress --chmod=ugo+rwx <username>@hb.ucsc.edu:/hb/groups/cornejo_lab/matt/sample_bams_vcfs ~/Desktop/
