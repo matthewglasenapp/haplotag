@@ -68,6 +68,7 @@ RG:Z:m84039_240622_113450_s1	qs:i:0	qe:i:7293	mg:f:99.3829	NM:i:193	HP:i:2	PC:i:
 This read belongs to haplotype 2 in phase set 29921307
 
 ## Example of Good Phasing (HG002 HLA-A)
+Here, I have opened hap1.bam and hap2.bam in separate IGV tracks. 
 
 ![hla-a](https://github.com/user-attachments/assets/03cfb635-60cc-401e-9a4b-2f890e1c9ff1)
 
