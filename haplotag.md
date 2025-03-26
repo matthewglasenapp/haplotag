@@ -69,7 +69,7 @@ This read belongs to haplotype 2 in phase set 29921307
 
 ## Example of Good Phasing (HG002 HLA-A)
 
-Here is the HG002.haplotag.BAM. First, I am going to color the alignments by the PS tag. "PS" stands for "Phase Set" and represents the haploblocks defined by HiPhase.
+Here is the HG002.haplotag.BAM. First, I am going to color the alignments by the PS tag. "PS" stands for "Phase Set" and represents the haploblocks defined by HiPhase or WhatsHap.
 ![igv_snapshot](https://github.com/user-attachments/assets/13cd7d05-3efa-4f87-aac5-5014f10969c1)
 
 You can also color alignments by HP tag.  "HP" stands for haplotype and specifies whether the read originated from haplotype 1 or haplotype 2. 
