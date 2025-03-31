@@ -2,7 +2,7 @@ The Research Tutorial is in the haplotag.md file.
 
 The data we will be working with is located on Hummingbird in ```/hb/groups/cornejo_lab/matt/sample_bams_vcfs/```
 
-Each sample has its own directory containing multiple files. Here is an example of the files for HG002.
+Each sample has its own directory containing multiple files resulting from phasing with WhatsHap. Here is an example of the files for HG002.
 
 ```
 HG002.haplotag.bam
@@ -13,11 +13,9 @@ HG002.haplotag.hap2.bam
 HG002.haplotag.hap2.bam.bai
 HG002.haplotag.no_hp.bam
 HG002.haplotag.no_hp.bam.bai
-HG002.vcf.gz
-HG002.vcf.gz.tbi
 ```
 
-```HG002.haplotag.bam``` is the alignment file containing both haplotypes. Begin your investigation with this file. I have also split the BAM by haplotype into ```HG002.haplotag.hap1.bam``` and ```HG002.haplotag.hap2.bam```. Reads that could not be assigned a haplotype are in ```HG002.haplotag.no_hp.bam```. ```HG002.vcf.gz``` is the VCF file containing the genotypes called by DeepVariant. 
+```HG002.haplotag.bam``` is the alignment file containing both haplotypes. Begin your investigation with this file. I have also split the BAM by haplotype into ```HG002.haplotag.hap1.bam``` and ```HG002.haplotag.hap2.bam```. Reads that could not be assigned a haplotype are in ```HG002.haplotag.no_hp.bam```.
 
 In total, it is about 2.6 GB of data.
 
