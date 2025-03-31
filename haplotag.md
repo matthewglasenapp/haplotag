@@ -7,7 +7,7 @@ For the gene x sample combinations that could not be fully phased,
 2. Were there unphased heterozygous genotypes? If so, where in the gene are they located?
 3. How does the IGV look at these sites? Are there structural variants or coverage depth anomalies? Do the IGVs for unphased samples look different from phased samples?
 
-Here is the latest heap map of the phasing results.
+Here is the latest heap map of the WhatsHap phasing results.
 ![hiphase_heat_map](https://github.com/user-attachments/assets/719edbc6-cc93-4b05-9a0f-a7674159a9e0)
 
 The heat map shows that we could not phase across the entire gene for the following gene x sample combinations:
